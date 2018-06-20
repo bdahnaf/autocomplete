@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>Auto Fill Up Search Box</title>
+    <!-- JQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/typeahead.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('input.new').typeahead({
+                name: 'new',
+                remote: 'search.php?key=%QUERY'
+            });
+        });
+    </script>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class=".col-xs-12">
+            <div class="panel panel-default">
+                <div>
+                    <form>
+                        <label for="name">Name</label>
+                        <input type="text" name="new" class="new" autocomplete="off" spellcheck="false" placeholder="Type your Query">
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
